@@ -1,7 +1,7 @@
 import csv
 import random
 
-def ListaComNomes(nomeDoArquivo, listaACadastrar):
+def ExtrairNomes(nomeDoArquivo, listaACadastrar):
     Arquivo = open(nomeDoArquivo, "r")
     arquivo_csv = csv.reader(Arquivo, delimiter=",")
     for lista in arquivo_csv:
@@ -10,10 +10,9 @@ def ListaComNomes(nomeDoArquivo, listaACadastrar):
     Arquivo.close()
     return listaACadastrar
 
-def GeradorAleatorio(lista, numGrupos):
+def GerarGrupos(lista, numGrupos):
     divisaoExata = len(lista) // numGrupos
     matriz = []
-    remanescentes = []
 
     # criando matriz
     for i in range(numGrupos):
@@ -51,7 +50,7 @@ def GeradorAleatorio(lista, numGrupos):
 
     return matriz
 
-def PrintListaAleatoria(lista, numGrupos):
+def MostrarListaAleatoria(lista):
     indice = int(1)
     for grupo in lista:
         print("--------------------------------")
