@@ -1,22 +1,12 @@
-import Rian
+import GeradorDeGrupos
 
-listaDeNomes=[]
-listaAleatoria=[]
-qtdDeGrupos = int(0)
-
-ArquivoDeBusca = "veteranos.csv"
+nomes=[]
+gruposEmbaralhados=[]
+arquivoDeBusca = "veteranos.csv"
 qtdDeGrupos = 4
 
-listaDeNomes =  Rian.ListaComNomes(ArquivoDeBusca, listaDeNomes)
-qtdDeMembros = len(listaDeNomes)
+nomes =  GeradorDeGrupos.ExtrairNomes(arquivoDeBusca, nomes)
 
-"""
-#Exibindo os nomes dos partipantes do escritório
-print("Lista de Nomes de participantes do Escritório:")
-for nome in listaDeNomes:
-    print(f"-{nome}")
-print(f"Tamanho total da lista: {qtdDeMembros}\n\n")
-"""
-listaAleatoria = Rian.GeradorAleatorio(listaDeNomes, 4)
+gruposEmbaralhados = GeradorDeGrupos.GerarGrupos(nomes, qtdDeGrupos)
 
-Rian.PrintListaAleatoria(listaAleatoria, qtdDeGrupos)
+GeradorDeGrupos.MostrarListaAleatoria(gruposEmbaralhados)
