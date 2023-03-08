@@ -50,3 +50,13 @@ def GeradorAleatorio(lista, numGrupos):
                     break
 
     return matriz
+
+def PrintListaAleatoria(lista, numGrupos):
+    indice = int(1)
+    for grupo in lista:
+        print("--------------------------------")
+        print(f"PARTICIPANTES DO GRUPO {indice}")
+        for nome in grupo:
+            print(f"-{nome}")
+        indice+=1
+        
