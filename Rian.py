@@ -1,6 +1,7 @@
 import csv
 import random
 
+# Nome de função usa um verbo pra indicar o que essa função faz, e funções com retorno normalmente indicam no nome o que retornam, cuidado !
 def ListaComNomes(nomeDoArquivo, listaACadastrar):
     Arquivo = open(nomeDoArquivo, "r")
     arquivo_csv = csv.reader(Arquivo, delimiter=",")
@@ -10,9 +11,11 @@ def ListaComNomes(nomeDoArquivo, listaACadastrar):
     Arquivo.close()
     return listaACadastrar
 
+# Nome de função usa um verbo pra indicar o que essa função faz, e funções com retorno normalmente indicam no nome o que retornam, cuidado !
 def GeradorAleatorio(lista, numGrupos):
     divisaoExata = len(lista) // numGrupos
     matriz = []
+    # Variável inutilizada
     remanescentes = []
 
     # criando matriz
@@ -51,6 +54,8 @@ def GeradorAleatorio(lista, numGrupos):
 
     return matriz
 
+# Parâmetro 'numGrupos' requisitado mas não utilizado na função
+# Misturando inglês com português no nome da função, cuidado !
 def PrintListaAleatoria(lista, numGrupos):
     indice = int(1)
     for grupo in lista:
