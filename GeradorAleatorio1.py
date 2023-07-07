@@ -1,12 +1,13 @@
+import os
 import GeradorDeGrupos
 
-nomes=[]
-gruposEmbaralhados=[]
-arquivoDeBusca = "veteranos.csv"
-qtdDeGrupos = 4
+os.system("cls")
 
-nomes =  GeradorDeGrupos.ExtrairNomes(arquivoDeBusca, nomes)
+nomes = []
+grupos_embaralhados = []
+arquivo = "veteranos.csv"
+numero_grupos = 4
 
-gruposEmbaralhados = GeradorDeGrupos.GerarGrupos(nomes, qtdDeGrupos)
-
-GeradorDeGrupos.MostrarListaAleatoria(gruposEmbaralhados)
+nomes =  GeradorDeGrupos.extrair_nomes(arquivo)
+grupos_embaralhados = GeradorDeGrupos.gerar_grupos(nomes, numero_grupos)
+GeradorDeGrupos.mostrar_grupos(grupos_embaralhados)
